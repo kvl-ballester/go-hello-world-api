@@ -11,6 +11,8 @@ func main() {
 	// Definir las rutas
 	http.HandleFunc("/hello", handler.HelloHandler)
 
+	http.HandleFunc("/date_html", handler.DateHtmlHandler)
+
 	fmt.Println("API escuchando en el puerto 8080...")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
